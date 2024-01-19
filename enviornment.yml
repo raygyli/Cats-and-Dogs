@@ -138,4 +138,4 @@ dependencies:
       - urllib3==2.1.0
       - werkzeug==3.0.1
       - wrapt==1.14.1
-prefix: /home/ray-li/miniconda3/envs/cats_dogs
+prefix: ~/miniconda3/envs/cats_dogs
