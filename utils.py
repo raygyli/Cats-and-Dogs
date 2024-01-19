@@ -1,9 +1,13 @@
+import json
 import numpy as np
 import matplotlib.pyplot as plt
 import tensorflow as tf
 
 def preprocess(images, labels):
-    images = tf.image.resize(images, [32, 32])
+    with open("config.json", 'r') as config_file:
+        config = json.load(config_file)
+    assert len(config["input_shape"]) == 3
+    images = tf.image.resize(images, config["input_shape"][:2])
     images = tf.cast(images, tf.float32) / 255.0
     return images
 
